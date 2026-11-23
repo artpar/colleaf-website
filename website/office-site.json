@@ -2,8 +2,8 @@
   "brand": "Colleaf",
   "product": "Colleaf Office Suite",
   "domain": "colleaf.com",
-  "description": "A local-first office suite for your documents, spreadsheets, files and everyday work. A personal workspace, on your own computer.",
-  "eyebrow": "Your work. Your workspace.",
-  "headline": "A little more focus.\nA lot more together.",
-  "intro": "Documents, spreadsheets, files and your daily plans. One quiet place to bring your work together, on your own computer."
+  "description": "Technical overview of Colleaf Office Suite: local Daptin runtime, SQLite storage, application capabilities, native file formats, resource limits and personal-pilot deployment status.",
+  "eyebrow": "Technical overview",
+  "headline": "Local office suite.\nSingle-owner runtime.",
+  "intro": "Browser UI backed by a local Daptin process, SQLite database and managed files. Includes documents, spreadsheets, file management, calendars, contacts, local mail drafts and booking configuration."
 }
