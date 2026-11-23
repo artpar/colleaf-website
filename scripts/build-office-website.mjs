@@ -16,7 +16,7 @@ html = html.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 });
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
-for (const file of ['office.css', 'office.js', 'office.svg']) {
+for (const file of ['office.css', 'office.svg']) {
   const bytes = await readFile(path.join(source, file));
   const hash = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
   const extension = path.extname(file);
