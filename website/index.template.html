@@ -24,11 +24,17 @@
     <section class="hero wrap" aria-labelledby="page-title">
       <h1 id="page-title">{{headline}}</h1>
       <p class="hero-copy">{{intro}}</p>
+      <p class="mission-copy">Documents, spreadsheets, files, mail, contacts, calendars and appointment scheduling are built into the same workspace. Run it on your own computer or server, choose who can access it, and decide where your data is stored.</p>
       <div class="product-window">
         <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>{{brand}} / Home</span><span class="window-mark">Workspace</span></div>
         <a class="screen-link" href="./office-home.html" target="_blank" rel="noopener" aria-label="Open the Home screenshot at full size"><img class="product-screen" src="./office-home.png" width="1440" height="960" fetchpriority="high" alt="The Home screen with recent project files, inbox messages, an agenda and upcoming appointments."></a>
       </div>
       <div class="screen-caption"><span>Actual product screen · Sample data</span><a href="./office-home.html" target="_blank" rel="noopener">View full-size screen</a></div>
+    </section>
+    <section class="ownership-section wrap" aria-label="Control, privacy and reliability">
+      <article><h2>Control where your data lives</h2><p>Your workspace uses the database and file storage you choose. You decide where to host it, who administers it, and how backups are kept. Your working files remain available to download from your installation.</p></article>
+      <article><h2>Decide who can access your work</h2><p>Access to the workspace is handled by your own installation. You control who can sign in and whether the workspace is reachable only on your computer, across your network or at a public address.</p></article>
+      <article><h2>Know when your work is saved</h2><p>Documents and spreadsheets autosave, with visible save feedback and an explicit Save command. If a newer copy is found, saving pauses and keeps your draft available to review or download before reloading.</p></article>
     </section>
     <section class="capability-section wrap" aria-labelledby="editing-title">
       <h2 id="editing-title">Document and spreadsheet editing</h2>
@@ -46,7 +52,6 @@
           <li><strong>Import and export:</strong> bring in CSV data or download the current sheet's calculated values for use in other tools. Save the whole workbook as <code>.vsheets</code> to keep its sheets, formulas and formatting.</li>
         </ul></article>
       </div>
-      <aside class="save-note"><h3>Saving your work</h3><p>Documents and spreadsheets save automatically as you edit, with a Save command available whenever you need it. If a newer copy is found, you can keep your changes and download a copy before reloading.</p></aside>
     </section>
     <section class="files-section wrap" aria-labelledby="files-title">
       <h2 id="files-title">File storage, previews and search</h2>
@@ -99,9 +104,9 @@
     </section>
     <section class="deployment-section" aria-labelledby="deployment-title">
       <div class="wrap deployment-grid">
-        <div><h2 id="deployment-title">Deployment and data</h2><div class="deployment-options">
+        <div><h2 id="deployment-title">Your installation, your operating decisions</h2><div class="deployment-options">
           <article><h3>Local installation</h3><p>Install the application on your own computer and use it in your browser. Your workspace is available while the application is running.</p></article>
-          <article><h3>Network installation</h3><p>Host the workspace on your own server and give users its web address. You control sign-in access, HTTPS and where the data is stored.</p></article>
+          <article><h3>Network installation</h3><p>Host the workspace on hardware or a hosting provider you choose. Set the web address, manage sign-in access and HTTPS, and keep control of the database and file storage.</p></article>
         </div></div>
         <div class="deployment-options"><article><h3>Database and stored files</h3><p>Choose SQLite, PostgreSQL or MySQL for your installation, along with the storage location for uploaded files and documents.</p></article><article><h3>Backup and recovery</h3><p>For a complete backup, keep the database and file storage together. You can also export individual documents, workbooks, contacts and calendars.</p></article><article><h3>Mail and guest access</h3><p>Use your own mail-server setup for email delivery. To make appointment pages available to guests, host them at an HTTPS address they can reach.</p></article></div>
       </div>

@@ -2,7 +2,7 @@
   "brand": "Colleaf",
   "product": "Colleaf Office Suite",
   "domain": "colleaf.com",
-  "description": "An office suite for documents, spreadsheets, email, contacts and scheduling. Run Colleaf on your computer or host it on your own server.",
-  "headline": "An office suite you can host yourself.",
-  "intro": "Write and format documents, build spreadsheets, organize files, and manage email, contacts, calendars and appointments from your own workspace."
+  "description": "Colleaf is an independent, self-hosted office suite with built-in documents, spreadsheets, files, mail, contacts and scheduling. Control where your data lives, who can access it and how it is backed up.",
+  "headline": "An independent office suite for professional work.",
+  "intro": "We’re building a complete office suite so your professional work doesn’t depend on a Microsoft or Google account."
 }
