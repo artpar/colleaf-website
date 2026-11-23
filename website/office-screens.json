@@ -1,0 +1,86 @@
+[
+  {
+    "file": "office-home.png",
+    "label": "Home workspace",
+    "alt": "Recent proposal and budget files, client mail, the daily agenda and a consultation link.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-docs.png",
+    "label": "Document editor",
+    "alt": "A formatted project proposal with scope, delivery dates and project terms.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-sheets.png",
+    "label": "Spreadsheet editor",
+    "alt": "A project budget with calculated costs, spending, remaining balances and a payment schedule.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-drive.png",
+    "label": "Drive preview",
+    "alt": "Project documents, a budget, meeting notes and a content checklist with an inline text preview.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-inbox.png",
+    "label": "Mail inbox",
+    "alt": "Client and supplier correspondence about an active studio launch.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-mail.png",
+    "label": "Message reader",
+    "alt": "A client message confirming the scope and the dates needed for a project launch.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-contacts.png",
+    "label": "Contact preview",
+    "alt": "A project contact list with organizations, email addresses and telephone numbers, alongside a client preview.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-calendar.png",
+    "label": "Weekly calendar",
+    "alt": "A working week of discovery meetings, design time, content reviews and project planning.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-event.png",
+    "label": "Event details",
+    "alt": "A client discovery meeting with its description, time, location and attachment controls.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-booking.png",
+    "label": "Weekly availability",
+    "alt": "A consultation schedule with weekday availability and a calendar checked for conflicts.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-booking-rules.png",
+    "label": "Appointment rules",
+    "alt": "Consultation buffers, advance notice, booking horizon and capacity settings.",
+    "width": 1380,
+    "height": 900
+  },
+  {
+    "file": "office-guest.png",
+    "label": "Guest booking page",
+    "alt": "A guest-facing consultation page with a date, time zone and available appointment times.",
+    "width": 1380,
+    "height": 900
+  }
+]

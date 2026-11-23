@@ -142,3 +142,29 @@ h3 { font-size: 1.0625rem; font-weight: 550; letter-spacing: -.015em; }
 .transfer-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
 .transfer-note p { margin-top: 10px; color: var(--muted); }
 .deployment-grid>div>.section-lead { margin-top: -8px; margin-bottom: 28px; }
+
+/* Real application captures remain visible beside the capabilities they show. */
+.product-figure { min-width: 0; margin-block: 28px; }
+.product-figure .screen-link { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: var(--soft); }
+.product-figure figcaption { display: flex; justify-content: space-between; gap: 16px; margin-top: 10px; color: var(--muted); font-size: .875rem; line-height: 1.5; }
+.product-figure figcaption a { flex-shrink: 0; }
+.editor-stories { grid-template-columns: minmax(0,1fr); gap: 48px; margin-top: 32px; }
+.editor-story { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); gap: 32px; align-items: start; }
+.editor-story .product-figure { margin: 0; }
+.daily-grid .product-figure { margin-block: 0 28px; }
+.daily-section .product-figure figcaption { color: #ccc; }
+.daily-section .product-figure .screen-link { border-color: #555; }
+.inbox-screen { padding-bottom: 48px; }
+.inbox-screen .product-figure { margin: 0; }
+.booking-section>.product-figure { margin: 0 0 40px; }
+.screen-pair { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; margin-top: 32px; }
+.screen-pair .product-figure { margin: 0; }
+@media(max-width:900px) {
+  .editor-story { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .product-figure figcaption { flex-wrap: wrap; gap: 6px 16px; }
+}
+@media(max-width:600px) {
+  .screen-pair { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .product-figure { margin-block: 24px; }
+  .inbox-screen { padding-bottom: 36px; }
+}

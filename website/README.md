@@ -14,9 +14,18 @@ The build writes only to ignored `website/dist/`. It includes the page, local
 assets, canonical URL, sitemap, robots file and domain metadata. There are no
 analytics, signup forms, external fonts or runtime services.
 
-Product screens use disposable sample data from the Home dashboard and Booking
-availability evidence. The source PNGs are copied unchanged and presented in
-grayscale through CSS.
+The 12 product screens were captured from the actual `release/Office` application
+on 23 November 2026, using an isolated local workspace and a fictional Studio North
+/ Ember Studio project. They show a formatted proposal, a calculated project budget,
+project files and previews, client correspondence, contacts, calendar events,
+appointment rules and the real guest booking page. These are application renders,
+not HTML replicas or generated illustrations. No customer workspace data is used.
+
+`office-screens.json` records each image's label, description and dimensions.
+Captures are cropped to exclude a third-party browser extension at the right edge;
+product content is not composited or retouched. Grayscale is applied through CSS.
+Every image has a full-size viewer; below-the-fold images load lazily. Together,
+the source PNGs total less than 1 MiB.
 
 ## Hosting
 
