@@ -1,4 +1,5 @@
-import { readFile, writeFile, mkdir, copyFile, rm } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -15,8 +16,15 @@ html = html.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 });
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
+for (const file of ['office.css', 'office.js', 'office.svg']) {
+  const bytes = await readFile(path.join(source, file));
+  const hash = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  const extension = path.extname(file);
+  const versionedFile = `${path.basename(file, extension)}.${hash}${extension}`;
+  html = html.replaceAll(`./${file}`, `./${versionedFile}`);
+  await writeFile(path.join(output, versionedFile), bytes);
+}
 await writeFile(path.join(output, 'index.html'), html);
-for (const file of ['office.css', 'office.js', 'office.svg']) await copyFile(path.join(source, file), path.join(output, file));
 await writeFile(path.join(output, '.nojekyll'), '');
 await writeFile(path.join(output, 'CNAME'), `${config.domain}\n`);
 await writeFile(path.join(output, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${config.domain}/sitemap.xml\n`);
