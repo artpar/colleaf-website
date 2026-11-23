@@ -79,6 +79,13 @@ contact/calendar exchange, controlling appointment boundaries, and deciding
 who operates the installation. Keep the feature detail tied to these needs.
 Maintain grayscale, compact headings and directly visible content.
 
+Calendar and Contacts copy names CalDAV and CardDAV explicitly and distinguishes
+access to the same server-side records from one-time iCalendar/vCard exports.
+The web adapters use those protocol resources; Address books exposes a CardDAV
+path in Sync details. Do not infer compatibility with every named phone or desktop
+client from protocol support, or describe a native client as independently verified
+without its own evidence.
+
 Research informing this framing:
 
 - [Microsoft's workplace research](https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday/) describes fragmented work and interruptions.
