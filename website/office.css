@@ -5,3 +5,5 @@
 .deployment-intro{margin-top:24px;color:var(--muted)}
 
 :root{accent-color:#333333;scrollbar-color:#aaaaaa #f5f5f5}::selection{background:#d4d4d4;color:#171717}
+
+@media(max-width:600px){nav>a:not(.nav-pilot){display:block}nav{gap:8px}nav a{font-size:.8125rem}}
