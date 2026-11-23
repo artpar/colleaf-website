@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{product}} — Your work, together.</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#214d3b">
+  <link rel="canonical" href="https://{{domain}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{product}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="https://{{domain}}/">
+  <link rel="icon" type="image/svg+xml" href="./office.svg">
+  <link rel="stylesheet" href="./office.css">
+  <script src="./office.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="{{brand}} home"><img src="./office.svg" width="30" height="30" alt="">{{brand}}<span class="wordmark-detail">Office suite</span></a>
+    <nav aria-label="Main navigation"><a href="#workspace">The workspace</a><a href="#approach">Our approach</a><a class="nav-pilot" href="#pilot">Pilot status <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="tiny-leaf" aria-hidden="true"></span>{{eyebrow}}</p>
+      <h1 id="hero-title">{{headline}}</h1>
+      <p class="hero-intro">{{intro}}</p>
+      <div class="hero-actions"><a class="button primary" href="#workspace">Explore the workspace</a><a class="text-link" href="#pilot">Meet the personal pilot</a></div>
+      <p class="hero-note">Local-first · Built for one person · In development</p>
+      <figure class="workspace-figure">
+        <div class="workspace-demo" aria-label="Illustrative personal workspace">
+          <aside class="demo-sidebar" aria-label="Workspace illustration navigation">
+            <div class="demo-identity"><img src="./office.svg" width="24" height="24" alt=""><strong>My workspace</strong></div>
+            <div class="demo-search"><span aria-hidden="true">⌕</span> Find your work <kbd>⌘ K</kbd></div>
+            <div class="demo-nav"><span class="active">⌂ <b>Home</b></span><span>▱ <b>Drive</b></span><span>▤ <b>Docs</b></span><span>▦ <b>Sheets</b></span><span>□ <b>Calendar</b></span><span>▣ <b>Booking</b></span><span>✉ <b>Mail</b></span><span>♧ <b>Contacts</b></span></div>
+            <div class="sidebar-foot">A place for your everyday.</div>
+          </aside>
+          <div class="demo-main">
+            <div class="demo-topbar"><span>Home</span><span class="demo-avatar">A</span></div>
+            <div class="demo-content">
+              <div class="demo-greeting"><div><p class="demo-date">MONDAY, NOVEMBER 23</p><p class="demo-title">Room for a good day's work.</p><p class="demo-subtitle">Pick up where you left off.</p></div><span class="sun" aria-hidden="true">☼</span></div>
+              <div class="demo-section-heading"><strong>Recent work</strong><span>View all</span></div>
+              <div class="demo-file"><span class="file-icon doc">▤</span><div><strong>A plan for the week</strong><span>Docs · Personal</span></div><span class="file-time">Just now</span></div>
+              <div class="demo-file"><span class="file-icon sheet">▦</span><div><strong>The little business budget</strong><span>Sheets · Projects</span></div><span class="file-time">This morning</span></div>
+              <div class="demo-file"><span class="file-icon folder">▱</span><div><strong>Ideas worth keeping</strong><span>Drive · Personal</span></div><span class="file-time">Yesterday</span></div>
+              <div class="demo-bottom"><div><div class="demo-section-heading"><strong>On your calendar</strong></div><div class="demo-event"><span>10:00</span><div><strong>A little planning time</strong><span>Personal calendar</span></div></div></div><div class="demo-note"><span class="eyebrow">ALL IN ONE PLACE</span><p>Less switching.<br>More doing.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Workspace illustration with sample content. The current app may look different.</figcaption>
+      </figure>
+    </section>
+    <section class="workspace-section wrap" id="workspace" aria-labelledby="workspace-title">
+      <div class="section-intro"><p class="eyebrow">A place for every part of your day</p><h2 id="workspace-title">Your everyday essentials.<br>Finally, in the same place.</h2><p>Write an idea down. Work through the numbers. Make a little space in your calendar. Keep the pieces of your working day within reach.</p></div>
+      <div class="app-browser">
+        <div class="app-tabs" role="tablist" aria-label="Explore the apps">
+          <button id="tab-docs" role="tab" aria-selected="true" aria-controls="panel-docs" tabindex="0">Docs</button>
+          <button id="tab-sheets" role="tab" aria-selected="false" aria-controls="panel-sheets" tabindex="-1">Sheets</button>
+          <button id="tab-drive" role="tab" aria-selected="false" aria-controls="panel-drive" tabindex="-1">Drive</button>
+          <button id="tab-calendar" role="tab" aria-selected="false" aria-controls="panel-calendar" tabindex="-1">Calendar</button>
+          <button id="tab-contacts" role="tab" aria-selected="false" aria-controls="panel-contacts" tabindex="-1">Contacts</button>
+          <button id="tab-mail" role="tab" aria-selected="false" aria-controls="panel-mail" tabindex="-1">Mail</button>
+          <button id="tab-booking" role="tab" aria-selected="false" aria-controls="panel-booking" tabindex="-1">Booking</button>
+        </div>
+        <section class="app-panel" id="panel-docs" role="tabpanel" aria-labelledby="tab-docs" tabindex="0"><span class="panel-symbol doc" aria-hidden="true">▤</span><div><p class="eyebrow">From a first thought to a finished draft</p><h3>Give your ideas a home.</h3><p>Write and format documents, add tables and images, find the right words, and return to your saved work.</p><p class="panel-detail">Native document format · Rich-text editing · Find and replace</p></div></section>
+        <section class="app-panel" id="panel-sheets" role="tabpanel" aria-labelledby="tab-sheets" tabindex="0" hidden><span class="panel-symbol sheet" aria-hidden="true">▦</span><div><p class="eyebrow">Make sense of the moving pieces</p><h3>A clearer view of your numbers.</h3><p>Build a budget, organize a project, or work through an idea with formulas, formatting, sorting and filters.</p><p class="panel-detail">Multiple worksheets · Formulas · CSV import and export</p></div></section>
+        <section class="app-panel" id="panel-drive" role="tabpanel" aria-labelledby="tab-drive" tabindex="0" hidden><span class="panel-symbol folder" aria-hidden="true">▱</span><div><p class="eyebrow">Everything has a place</p><h3>Find it. Open it. Keep going.</h3><p>Browse folders, search your files, preview supported formats and create documents or spreadsheets right where they belong.</p><p class="panel-detail">Local files · Upload and download · Up to 5 MiB per upload</p></div></section>
+        <section class="app-panel" id="panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" tabindex="0" hidden><span class="panel-symbol calendar" aria-hidden="true">□</span><div><p class="eyebrow">A little room for what matters</p><h3>Put your day in perspective.</h3><p>Keep personal calendars, create events, work with supported recurrence and time zones, and find your plans again.</p><p class="panel-detail">Personal events · Recurring plans · Local calendar workflows</p></div></section>
+        <section class="app-panel" id="panel-contacts" role="tabpanel" aria-labelledby="tab-contacts" tabindex="0" hidden><span class="panel-symbol contacts" aria-hidden="true">♧</span><div><p class="eyebrow">Remember the people behind the work</p><h3>Your own little address book.</h3><p>Keep names and useful details together. Search contacts, organize address books and bring contacts in or out with vCard files.</p><p class="panel-detail">Contact details · Address books · vCard import and export</p></div></section>
+        <section class="app-panel" id="panel-mail" role="tabpanel" aria-labelledby="tab-mail" tabindex="0" hidden><span class="panel-symbol mail" aria-hidden="true">✉</span><div><p class="eyebrow">Space to get your thoughts down</p><h3>Compose at your own pace.</h3><p>Write and save drafts with attachments, and read messages present in a configured local mailbox.</p><p class="panel-detail">The default identity is drafts-only. Internet email delivery and Gmail or Outlook connections are outside the personal pilot.</p></div></section>
+        <section class="app-panel" id="panel-booking" role="tabpanel" aria-labelledby="tab-booking" tabindex="0" hidden><span class="panel-symbol booking" aria-hidden="true">▣</span><div><p class="eyebrow">Make room for a conversation</p><h3>Shape your availability.</h3><p>Prepare appointment types, organize availability, keep owner appointment records and preview the guest experience locally.</p><p class="panel-detail">Local preview · Public booking and guest notifications require a separately qualified deployment.</p></div></section>
+      </div>
+      <noscript><p>Enable JavaScript to explore all seven app descriptions. The personal pilot includes Docs, Sheets, Drive, Calendar, Contacts, local mail drafts and local Booking preparation.</p></noscript>
+    </section>
+    <section class="approach-section" id="approach" aria-labelledby="approach-title"><div class="wrap approach-grid"><div><p class="eyebrow">A quieter way to work</p><h2 id="approach-title">A personal workspace.<br>In the most literal sense.</h2></div><div class="principles"><article><h3>At home on your computer.</h3><p>The personal pilot runs locally, with its database and managed files on your machine. Open your workspace in the browser while the local app is running.</p></article><article><h3>Made for your own work.</h3><p>One owner, one workspace. A focused place for personal projects, freelance work and the day-to-day details of a small business.</p></article><article><h3>Familiar from one app to the next.</h3><p>Find, open, edit, save and return. A consistent workspace helps you stay with the task at hand.</p></article></div></div></section>
+    <section class="pilot-section wrap" id="pilot" aria-labelledby="pilot-title"><div><p class="eyebrow">Growing thoughtfully</p><h2 id="pilot-title">Small beginnings.<br>Real, everyday work.</h2><p>{{product}} is in development. The current candidate is being prepared for an assisted personal pilot, starting with one owner on an Apple Silicon Mac.</p><p>There is no public download or hosted account signup yet. Windows and Linux packaging is being prepared; platform qualification and pilot acceptance are tracked separately.</p></div><aside class="pilot-note"><span class="pilot-label">PERSONAL PILOT 1</span><h3>A considered start.</h3><ul><li>Local workspace for one person</li><li>Assisted, invited installations</li><li>Current build remains a candidate</li></ul><p>Want to follow along? This website will carry public availability updates as the project develops.</p></aside></section>
+  </main>
+  <footer class="site-footer wrap"><a class="wordmark" href="#"><img src="./office.svg" width="24" height="24" alt="">{{brand}}</a><p>A little space for your best work.</p><a href="#pilot">Development status</a></footer>
+</body>
+</html>
