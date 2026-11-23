@@ -1,0 +1,37 @@
+[
+  {
+    "file": "index.html",
+    "template": "index.template.html",
+    "title": "{{product}}",
+    "description": "{{description}}",
+    "nav": "home"
+  },
+  {
+    "file": "workspace.html",
+    "template": "pages/workspace.html",
+    "title": "Workspace \u2014 {{brand}}",
+    "description": "Built-in document and spreadsheet editors, project files and previews in your own workspace.",
+    "nav": "workspace"
+  },
+  {
+    "file": "communication.html",
+    "template": "pages/communication.html",
+    "title": "Mail & contacts \u2014 {{brand}}",
+    "description": "Correspondence, drafts, address books and CardDAV access in your own installation.",
+    "nav": "communication"
+  },
+  {
+    "file": "scheduling.html",
+    "template": "pages/scheduling.html",
+    "title": "Calendar & booking \u2014 {{brand}}",
+    "description": "Calendars, CalDAV access, availability rules and guest appointment scheduling.",
+    "nav": "scheduling"
+  },
+  {
+    "file": "deployment.html",
+    "template": "pages/deployment.html",
+    "title": "How it runs \u2014 {{brand}}",
+    "description": "Run the suite on your computer or server. Choose storage, updates, backups and network access.",
+    "nav": "deployment"
+  }
+]

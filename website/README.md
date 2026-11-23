@@ -3,6 +3,17 @@
 This is a standalone, static product website. Branding is supplied by
 `office-site.json`; the application and its runtime data are not deployed.
 
+The homepage introduces the complete suite through its actual workspace and
+three visual routes into the apps. Detailed capabilities and screenshots live
+on Workspace, Mail & contacts, and Calendar & booking pages. How it runs explains
+deployment choices. There is no download funnel or invented public download URL.
+
+`office-pages.json` registers the five pages and their metadata. The shared
+`layout.template.html` owns navigation and the footer; `index.template.html`
+and `pages/` contain the page bodies. The build emits flat HTML URLs, active
+navigation, page-specific canonical metadata and a five-page sitemap. All
+content and navigation work without JavaScript.
+
 Build with Node 22 or newer (no dependencies required):
 
 ```sh

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{page_description}}">
+  <meta name="theme-color" content="#191919">
+  <link rel="canonical" href="{{page_url}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{page_title}}">
+  <meta property="og:description" content="{{page_description}}">
+  <meta property="og:url" content="{{page_url}}">
+  <link rel="icon" type="image/svg+xml" href="./office.svg">
+  <link rel="stylesheet" href="./office.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./index.html" aria-label="{{brand}} home"><img src="./office.svg" width="30" height="30" alt="">{{brand}}</a>
+    <nav class="site-nav" aria-label="Main navigation">{{navigation}}</nav>
+  </header>
+  <main id="main">{{content}}</main>
+  <footer class="site-footer wrap"><a class="wordmark" href="./index.html"><img src="./office.svg" width="24" height="24" alt="">{{brand}}</a><span>{{product}}</span><a href="./deployment.html">How it runs</a></footer>
+</body>
+</html>
