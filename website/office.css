@@ -99,3 +99,32 @@ h3 { font-size: 1.0625rem; font-weight: 550; letter-spacing: -.015em; }
   .site-footer { flex-wrap: wrap; gap: 12px 20px; padding-block: 24px; }
   .site-footer>span:nth-child(2) { width: 100%; order: 3; }
 }
+
+/* Detailed product capabilities. */
+.capability-section { padding-block: 56px; }
+.capability-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 24px; }
+.capability-columns h3 { margin-bottom: 16px; }
+.feature-list { display: grid; gap: 14px; margin: 0; padding-left: 18px; color: var(--muted); }
+.feature-list strong { color: var(--text); font-weight: 550; }
+.feature-list code { color: var(--text); font-size: .9375rem; }
+.save-note { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 24px; }
+.save-note p { color: var(--muted); margin-top: 10px; max-width: 960px; }
+.files-section { padding-block: 48px 64px; border-top: 1px solid var(--border); }
+.daily-grid { gap: 72px; }
+.daily-section h2 { margin-bottom: 24px; }
+.daily-section .feature-list { color: #ccc; }
+.daily-section .feature-list strong { color: #fff; }
+.scheduling-columns { margin-top: 0; }
+.scheduling-columns h2 { margin-bottom: 24px; }
+.deployment-grid { gap: 72px; }
+.deployment-grid h2 { margin-bottom: 24px; }
+.deployment-grid>div:first-child .deployment-options article+article { margin-top: 24px; }
+.deployment-options article h3 { margin-bottom: 0; }
+@media(max-width:900px) { .capability-columns,.daily-grid,.deployment-grid { gap: 40px; } }
+@media(max-width:600px) {
+  .capability-section { padding-block: 40px; }
+  .capability-columns { grid-template-columns: 1fr; gap: 32px; }
+  .files-section { padding-block: 36px 44px; }
+  .feature-list { gap: 12px; }
+  .daily-grid,.deployment-grid { gap: 36px; }
+}

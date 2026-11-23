@@ -2,7 +2,7 @@
   "brand": "Colleaf",
   "product": "Colleaf Office Suite",
   "domain": "colleaf.com",
-  "description": "Colleaf brings documents, spreadsheets, files, mail and scheduling into one browser workspace. Run it on your computer or host it on your own server.",
+  "description": "Colleaf Office Suite: document formatting, spreadsheet formulas, file previews, mailbox search, vCard address books, recurring calendars and configurable appointment scheduling. Local or network deployment.",
   "headline": "An office suite you can host yourself.",
-  "intro": "Create documents and spreadsheets, manage files, and handle mail and appointments from one browser workspace."
+  "intro": "Document and spreadsheet editors, file storage, mailbox organization, address books, calendars and appointment scheduling in a self-hosted browser workspace."
 }

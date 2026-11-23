@@ -16,8 +16,7 @@ analytics, signup forms, external fonts or runtime services.
 
 Product screens use disposable sample data from the Home dashboard and Booking
 availability evidence. The source PNGs are copied unchanged and presented in
-grayscale through CSS. The project-file example is an illustration, not a
-product screenshot.
+grayscale through CSS.
 
 ## Hosting
 
