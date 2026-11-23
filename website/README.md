@@ -61,3 +61,24 @@ Pages DNS check before treating the custom domain as live. GitHub documents
 that propagation and HTTPS availability can take up to 24 hours.
 
 Source: [GitHub custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+## Copy direction and research
+
+The page explains practical consequences for the person using the suite:
+working continuity, finding and finishing work, keeping editable copies,
+contact/calendar exchange, controlling appointment boundaries, and deciding
+who operates the installation. Keep the feature detail tied to these needs.
+Maintain grayscale, compact headings and directly visible content.
+
+Research informing this framing:
+
+- [Microsoft's workplace research](https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday/) describes fragmented work and interruptions.
+- [Microsoft's subscription guidance](https://support.microsoft.com/en-us/accounts-billing/subscriptions/what-happens-when-my-microsoft-365-subscription-expires) documents reduced editing functionality for affected subscriptions after expiry.
+- [Microsoft's coauthoring guidance](https://support.microsoft.com/en-us/sharepoint/get-started-with-sharepoint/document-collaboration-and-co-authoring) describes offline edits and save conflicts.
+- [Google's organization-export guidance](https://knowledge.workspace.google.com/admin/migrate/export-all-your-organizations-data) documents an administrator-led export process.
+- [Google's appointment guidance](https://support.google.com/calendar/answer/11423292) explains buffers and booking notice controls.
+
+These sources identify concerns to address in the writing. Product capability
+claims come from this project's implementation and documentation. Pricing,
+licensing guarantees, universal file compatibility, uninterrupted availability
+and absolute privacy claims are not established by this research.
