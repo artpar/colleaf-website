@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{product}} — Technical overview</title>
+  <title>{{product}} — Capabilities and deployment</title>
   <meta name="description" content="{{description}}">
   <meta name="theme-color" content="#214d3b">
   <link rel="canonical" href="https://{{domain}}/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{product}} — Technical overview">
+  <meta property="og:title" content="{{product}} — Capabilities and deployment">
   <meta property="og:description" content="{{description}}">
   <meta property="og:url" content="https://{{domain}}/">
   <link rel="icon" type="image/svg+xml" href="./office.svg">
@@ -19,24 +19,18 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="wordmark" href="#" aria-label="{{brand}} home"><img src="./office.svg" width="30" height="30" alt="">{{brand}}<span class="wordmark-detail">Office suite</span></a>
-    <nav aria-label="Main navigation"><a href="#workspace">Capabilities</a><a href="#approach">Architecture</a><a class="nav-pilot" href="#pilot">Release status</a></nav>
+    <nav aria-label="Main navigation"><a href="#workspace">Capabilities</a><a href="#approach">Deployment</a><a class="nav-pilot" href="#pilot">Release status</a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <p class="eyebrow">{{eyebrow}}</p>
       <h1 id="hero-title">{{headline}}</h1>
       <p class="hero-intro">{{intro}}</p>
-      <div class="hero-actions"><a class="button primary" href="#workspace">Application capabilities</a><a class="text-link" href="#pilot">Deployment requirements</a></div>
-      <p class="hero-note">Development candidate · One owner · Local execution</p>
-      <dl class="runtime-specs" aria-label="Runtime specification">
-        <div><dt>Frontend</dt><dd>Vue 3 / TypeScript</dd></div>
-        <div><dt>Backend</dt><dd>Embedded Daptin</dd></div>
-        <div><dt>Persistence</dt><dd>SQLite + local files</dd></div>
-        <div><dt>Connection</dt><dd>Loopback HTTP</dd></div>
-      </dl>
+      <div class="hero-actions"><a class="button primary" href="#workspace">Application capabilities</a><a class="text-link" href="#approach">Deployment options</a></div>
+      <p class="hero-note">Self-hosted · Browser access · Development candidate</p>
     </section>
     <section class="workspace-section wrap" id="workspace" aria-labelledby="workspace-title">
-      <div class="section-intro"><p class="eyebrow">Application reference</p><h2 id="workspace-title">Capabilities and format support</h2><p>The following capabilities define the personal-pilot scope. Operational acceptance remains separate from implementation and package-build verification.</p></div>
+      <div class="section-intro"><p class="eyebrow">Application reference</p><h2 id="workspace-title">Capabilities and format support</h2><p>Application functions, supported exchange formats and current limits.</p></div>
       <div class="app-browser">
         <div class="app-tabs" role="tablist" aria-label="Application capabilities">
           <button id="tab-docs" role="tab" aria-selected="true" aria-controls="panel-docs" tabindex="0">Docs</button>
@@ -47,38 +41,31 @@
           <button id="tab-mail" role="tab" aria-selected="false" aria-controls="panel-mail" tabindex="-1">Mail</button>
           <button id="tab-booking" role="tab" aria-selected="false" aria-controls="panel-booking" tabindex="-1">Booking</button>
         </div>
-        <section class="app-panel" id="panel-docs" role="tabpanel" aria-labelledby="tab-docs" tabindex="0"><div><p class="eyebrow">Native format: .vdocs</p><h3>Rich-text document editing</h3><p>Univer-based editing with formatting, supported tables and images, find/replace, autosave, native save/download and conflict recovery.</p><p class="panel-detail">Snapshot limit: 5 MiB. Supported local images: up to 2 MiB each. DOCX/PDF import/export and simultaneous editing are outside the pilot scope.</p></div></section>
-        <section class="app-panel" id="panel-sheets" role="tabpanel" aria-labelledby="tab-sheets" tabindex="0" hidden><div><p class="eyebrow">Native format: .vsheets</p><h3>Spreadsheet editing and CSV exchange</h3><p>Univer-based workbooks with formulas, formatting, multiple worksheets, sorting, filtering, native import/export and CSV import/export. CSV exports one worksheet's calculated/displayed values.</p><p class="panel-detail">Maximum: 5 MiB per native snapshot, 32 worksheets, 10,000 rows and 256 columns per worksheet, and 200,000 populated cells overall. XLSX exchange, charts, macros and simultaneous editing are outside the pilot scope.</p></div></section>
-        <section class="app-panel" id="panel-drive" role="tabpanel" aria-labelledby="tab-drive" tabindex="0" hidden><div><p class="eyebrow">Storage: local managed files</p><h3>File browsing and operations</h3><p>Search and browse logical folders; upload, download, preview supported formats, rename, move and delete files. Create native documents and spreadsheets in the current folder.</p><p class="panel-detail">Upload limit: 5 MiB per file. Folders derive from saved file paths. The catalogue reader has a 10,000-record safety bound; this is not a performance guarantee.</p></div></section>
-        <section class="app-panel" id="panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" tabindex="0" hidden><div><p class="eyebrow">Records: personal calendars and events</p><h3>Local calendar management</h3><p>Create, edit, delete and search events with supported recurrence, time zones, floating time and managed attachments.</p><p class="panel-detail">The pilot covers local browser workflows. Remote phone sync, external invitation delivery and complete recurrence-variant support are outside this profile.</p></div></section>
-        <section class="app-panel" id="panel-contacts" role="tabpanel" aria-labelledby="tab-contacts" tabindex="0" hidden><div><p class="eyebrow">Exchange format: vCard</p><h3>Address books and contact records</h3><p>Create, edit and search contacts, manage supported contact fields, import/export vCard files and pass recipients to mail composition.</p><p class="panel-detail">Records use the local CardDAV backend. Native-client synchronization is outside the pilot support profile.</p></div></section>
-        <section class="app-panel" id="panel-mail" role="tabpanel" aria-labelledby="tab-mail" tabindex="0" hidden><div><p class="eyebrow">Default identity: drafts-only</p><h3>Local message access and composition</h3><p>Read messages already present in a configured Daptin mailbox. Compose, reply, forward, manage recipients, attach local or Drive files, insert inline images and save drafts.</p><p class="panel-detail">SMTP is disabled by the launcher. The default identity is not an Internet email address. Internet delivery and Gmail/Outlook account connections are outside the baseline pilot.</p></div></section>
-        <section class="app-panel" id="panel-booking" role="tabpanel" aria-labelledby="tab-booking" tabindex="0" hidden><div><p class="eyebrow">Deployment profile: local preview</p><h3>Appointment configuration and records</h3><p>Create and edit appointment types, configure availability, manage owner appointment records and preview the guest interface locally.</p><p class="panel-detail">Loopback URLs are not externally reachable. Public guest booking, rescheduling/cancellation and delivery notifications require separate deployment qualification.</p></div></section>
+        <section class="app-panel" id="panel-docs" role="tabpanel" aria-labelledby="tab-docs" tabindex="0"><div><p class="eyebrow">Native format: .vdocs</p><h3>Rich-text document editing</h3><p>Editing with formatting, supported tables and images, find/replace, autosave, native save/download and conflict recovery.</p><p class="panel-detail">Snapshot limit: 5 MiB. Supported local images: up to 2 MiB each. DOCX/PDF import/export and simultaneous editing are not currently supported.</p></div></section>
+        <section class="app-panel" id="panel-sheets" role="tabpanel" aria-labelledby="tab-sheets" tabindex="0" hidden><div><p class="eyebrow">Native format: .vsheets</p><h3>Spreadsheet editing and CSV exchange</h3><p>Workbooks with formulas, formatting, multiple worksheets, sorting, filtering, native import/export and CSV import/export. CSV exports one worksheet's calculated/displayed values.</p><p class="panel-detail">Maximum: 5 MiB per native snapshot, 32 worksheets, 10,000 rows and 256 columns per worksheet, and 200,000 populated cells overall. XLSX exchange, charts, macros and simultaneous editing are not currently supported.</p></div></section>
+        <section class="app-panel" id="panel-drive" role="tabpanel" aria-labelledby="tab-drive" tabindex="0" hidden><div><p class="eyebrow">Operations: upload, download, rename, move, delete</p><h3>File browsing and operations</h3><p>Search and browse logical folders; upload, download, preview supported formats, rename, move and delete files. Create native documents and spreadsheets in the current folder.</p><p class="panel-detail">Upload limit: 5 MiB per file. Folders derive from saved file paths. The catalogue reader has a 10,000-record safety bound; this is not a performance guarantee.</p></div></section>
+        <section class="app-panel" id="panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" tabindex="0" hidden><div><p class="eyebrow">Records: personal calendars and events</p><h3>Calendars, events and recurrence</h3><p>Create, edit, delete and search events with supported recurrence, time zones, floating time and managed attachments.</p><p class="panel-detail">Calendar management is available in the browser. Native-client synchronization and external invitation delivery require separate configuration and qualification.</p></div></section>
+        <section class="app-panel" id="panel-contacts" role="tabpanel" aria-labelledby="tab-contacts" tabindex="0" hidden><div><p class="eyebrow">Exchange format: vCard</p><h3>Address books and contact records</h3><p>Create, edit and search contacts, manage supported contact fields, import/export vCard files and pass recipients to mail composition.</p><p class="panel-detail">vCard import and export are supported. Native-client synchronization is outside current pilot qualification.</p></div></section>
+        <section class="app-panel" id="panel-mail" role="tabpanel" aria-labelledby="tab-mail" tabindex="0" hidden><div><p class="eyebrow">Operations: read, compose, reply, forward</p><h3>Mail reading and composition</h3><p>Read messages in configured mailboxes. Compose, reply, forward, manage recipients, attach local or Drive files, insert inline images and save drafts.</p><p class="panel-detail">Delivery depends on mail-server configuration. The personal-pilot launcher disables SMTP and defaults to a drafts-only identity; Internet delivery requires separate qualification.</p></div></section>
+        <section class="app-panel" id="panel-booking" role="tabpanel" aria-labelledby="tab-booking" tabindex="0" hidden><div><p class="eyebrow">Configuration: appointment types and availability</p><h3>Appointment configuration and records</h3><p>Create and edit appointment types, configure availability, manage owner appointment records and preview the guest interface.</p><p class="panel-detail">Public guest booking requires a reachable HTTPS deployment. Guest booking, rescheduling/cancellation and delivery notifications require separate end-to-end qualification.</p></div></section>
       </div>
-      <noscript><p>JavaScript is required to switch application tabs. The pilot scope includes native .vdocs documents, .vsheets workbooks and CSV exchange, local file operations, calendars, vCard contacts, local mail drafts and local Booking configuration.</p></noscript>
+      <noscript><p>JavaScript is required to switch application tabs. Applications include .vdocs documents, .vsheets workbooks and CSV exchange, file operations, calendars, vCard contacts, mail composition and appointment configuration.</p></noscript>
     </section>
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
       <div class="wrap approach-grid">
-        <div><p class="eyebrow">System architecture</p><h2 id="approach-title">Local process and storage model</h2><pre class="runtime-diagram" aria-label="Runtime data flow"><code>Chrome desktop
-    |
-    | loopback HTTP
-    v
-Office launcher / Daptin process
-    |
-    +-- SQLite: records and settings
-    +-- storage/: managed file bytes</code></pre></div>
+        <div><p class="eyebrow">Deployment options</p><h2 id="approach-title">Run locally or on your network</h2><p class="deployment-intro">Choose where the application runs and where its data is stored. Browser access is available on the same computer or through a configured network address.</p></div>
         <div class="principles">
-          <article><h3>Application and platform boundary</h3><p>The Office application uses Daptin APIs, resources, relationships, permissions and supported extension mechanisms. The frontend is implemented in Vue 3 and TypeScript; document and spreadsheet editors use Univer.</p></article>
-          <article><h3>Runtime lifecycle</h3><p>The packaged executable includes the launcher, backend, frontend and schema. The browser connects to loopback. The local process must remain running while the workspace is in use; closing the browser does not stop it.</p></article>
-          <article><h3>Backup and restore</h3><p>Save pending work and stop the process before copying the workspace. Back up the database and managed storage together. Test a restore in a separate directory using the matching executable.</p></article>
+          <article><h3>Local installation</h3><p>Run the application on your computer and access it in a browser. Keep the application process running while using the workspace.</p></article>
+          <article><h3>Network deployment</h3><p>Deploy on a server and access it from browsers over the network. Configure the server address, HTTPS, authentication and storage for that environment.</p></article>
+          <article><h3>Database and file storage</h3><p>Database options include SQLite, PostgreSQL and MySQL. Back up the configured database and file storage together, and verify restoration for the selected deployment.</p></article>
         </div>
       </div>
     </section>
     <section class="pilot-section wrap" id="pilot" aria-labelledby="pilot-title">
-      <div><p class="eyebrow">Personal Pilot 1</p><h2 id="pilot-title">Deployment and release status</h2><p>{{product}} is a development candidate for one owner and one active local workspace. The initial pilot target is an Apple Silicon Mac with Chrome desktop, using assisted, invited installations.</p><p>Package build targets are macOS arm64, Windows x64 and Linux x64. Native build verification, platform desktop qualification and operational pilot acceptance are separate checks.</p><p>No public download or hosted account signup is available. The invited unsigned Mac package is not Developer ID signed or notarized; installation requires the applicable macOS per-app approval.</p></div>
-      <aside class="pilot-note"><span class="pilot-label">BASELINE CONSTRAINTS</span><h3>Supported deployment profile</h3><ul><li>One owner; one local workspace</li><li>Local database and managed files</li><li>Local server required during use</li><li>Local storage is the default</li></ul><p>Team hosting, concurrent coauthoring, public Booking, Internet mail delivery and external-storage deployments are outside baseline qualification. The current candidate has not received operational release sign-off.</p></aside>
+      <div><p class="eyebrow">Development status</p><h2 id="pilot-title">Current release and evaluation</h2><p>{{product}} is a development candidate. No public download or hosted account signup is currently available.</p><p>Package build targets are macOS arm64, Windows x64 and Linux x64. Package build verification and operational release acceptance are tracked separately.</p></div>
+      <aside class="pilot-note"><span class="pilot-label">CURRENT EVALUATION PROFILE</span><h3>Personal Pilot 1</h3><p>The initial evaluation covers an assisted installation for one owner on an Apple Silicon Mac using Chrome desktop. This evaluation profile does not limit the product to local deployment or a particular database.</p><p>The invited Mac package is unsigned and not notarized. Network deployment, Internet mail and public Booking require their own configuration and operational qualification.</p></aside>
     </section>
   </main>
-  <footer class="site-footer wrap"><a class="wordmark" href="#"><img src="./office.svg" width="24" height="24" alt="">{{brand}}</a><p>{{product}} · Technical overview</p><a href="#pilot">Release status</a></footer>
+  <footer class="site-footer wrap"><a class="wordmark" href="#"><img src="./office.svg" width="24" height="24" alt="">{{brand}}</a><p>{{product}} · Capabilities and deployment</p><a href="#pilot">Release status</a></footer>
 </body>
 </html>
