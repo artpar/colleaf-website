@@ -16,13 +16,19 @@ html = html.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 });
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
-for (const file of ['office.css', 'office.svg']) {
+for (const file of ['office.css', 'office.svg', 'office-home.png', 'office-booking.png']) {
   const bytes = await readFile(path.join(source, file));
   const hash = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
   const extension = path.extname(file);
   const versionedFile = `${path.basename(file, extension)}.${hash}${extension}`;
   html = html.replaceAll(`./${file}`, `./${versionedFile}`);
   await writeFile(path.join(output, versionedFile), bytes);
+  if (extension === '.png') {
+    const label = file === 'office-home.png' ? 'Home workspace' : 'Appointment availability';
+    const title = escape(`${config.product} — ${label}`);
+    const viewer = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${title}</title><style>body{margin:0;background:#f3f3f3}img{display:block;max-width:none;margin:0 auto;filter:grayscale(1)}</style></head><body><img src="./${versionedFile}" alt="${label} with sample data"></body></html>`;
+    await writeFile(path.join(output, `${path.basename(file, extension)}.html`), viewer);
+  }
 }
 await writeFile(path.join(output, 'index.html'), html);
 await writeFile(path.join(output, '.nojekyll'), '');

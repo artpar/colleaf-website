@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{product}} — Features and deployment</title>
+  <title>{{product}}</title>
   <meta name="description" content="{{description}}">
-  <meta name="theme-color" content="#262626">
+  <meta name="theme-color" content="#191919">
   <link rel="canonical" href="https://{{domain}}/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{product}} — Features and deployment">
+  <meta property="og:title" content="{{product}}">
   <meta property="og:description" content="{{description}}">
   <meta property="og:url" content="https://{{domain}}/">
   <link rel="icon" type="image/svg+xml" href="./office.svg">
@@ -17,34 +17,44 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <div class="wordmark"><img src="./office.svg" width="28" height="28" alt="">{{brand}}</div>
+    <div class="wordmark"><img src="./office.svg" width="30" height="30" alt="">{{brand}}</div>
+    <span class="header-note">Self-hosted office suite</span>
   </header>
-  <main id="main" class="wrap">
-    <section class="intro" aria-labelledby="page-title">
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="page-title">
       <h1 id="page-title">{{headline}}</h1>
-      <p>{{intro}}</p>
+      <p class="hero-copy">{{intro}}</p>
+      <div class="product-window">
+        <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>{{brand}} / Home</span><span class="window-mark">Workspace</span></div>
+        <a class="screen-link" href="./office-home.html" target="_blank" rel="noopener" aria-label="Open the Home screenshot at full size"><img class="product-screen" src="./office-home.png" width="1440" height="960" fetchpriority="high" alt="The Home screen with recent project files, inbox messages, an agenda and upcoming appointments."></a>
+      </div>
+      <div class="screen-caption"><span>Actual product screen · Sample data</span><a href="./office-home.html" target="_blank" rel="noopener">View full-size screen</a></div>
+      <p class="suite-apps" aria-label="Included applications"><span>Docs</span><span>Sheets</span><span>Drive</span><span>Mail</span><span>Calendar</span><span>Contacts</span><span>Booking</span></p>
     </section>
-    <section class="reference" aria-labelledby="features-title">
-      <h2 id="features-title">Features</h2>
-      <div class="reference-rows">
-        <article><h3>Docs</h3><p>Write and format documents with tables, images, autosave, and find-and-replace.</p></article>
-        <article><h3>Sheets</h3><p>Use formulas across multiple worksheets. Sort and filter data, and import or export CSV.</p></article>
-        <article><h3>Drive</h3><p>Organize files in folders. Upload, preview supported formats, download, rename, move, and delete files.</p></article>
-        <article><h3>Calendar</h3><p>Schedule one-off and recurring events, work across time zones, and attach files.</p></article>
-        <article><h3>Contacts</h3><p>Maintain address books, search contact details, and import or export vCards.</p></article>
-        <article><h3>Mail</h3><p>Read configured mailboxes, compose and reply to messages, add attachments, and save drafts.</p></article>
-        <article><h3>Booking</h3><p>Define appointment types, set availability, and manage appointment records.</p></article>
+    <section class="project-section wrap" aria-labelledby="project-title">
+      <div class="section-copy"><p class="overline">Documents, spreadsheets &amp; files</p><h2 id="project-title">Start with a folder.<br>Create the work inside it.</h2><p>Create a document or spreadsheet directly in a project folder. Write a proposal, work through the budget, and keep supporting files alongside both.</p><p class="supporting-copy">Rich-text editing, tables and images. Formulas, sorting and filters. CSV import and export.</p></div>
+      <figure class="project-example">
+        <div class="folder-label"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5h6l2 2h10v12H3Z"/></svg>Client project</div>
+        <div class="example-file"><span class="file-glyph" aria-hidden="true">▤</span><div><strong>Project proposal</strong><span>Document</span></div><span class="file-format">.vdocs</span></div>
+        <div class="example-file"><span class="file-glyph" aria-hidden="true">▦</span><div><strong>Project budget</strong><span>Spreadsheet</span></div><span class="file-format">.vsheets</span></div>
+        <div class="example-file"><span class="file-glyph" aria-hidden="true">▧</span><div><strong>Reference material</strong><span>Files &amp; attachments</span></div></div>
+        <figcaption>Example project structure</figcaption>
+      </figure>
+    </section>
+    <section class="daily-section" aria-labelledby="daily-title">
+      <div class="wrap daily-grid">
+        <div><p class="overline">Mail, contacts &amp; calendar</p><h2 id="daily-title">The conversation.<br>The files. The follow-up.</h2></div>
+        <div class="daily-copy"><p>Read a message, reply with a file from Drive, and keep the contact's details in your address book. Plan the follow-up in Calendar, with recurring events and time-zone support.</p><p>Home brings your recent work, inbox and agenda into one view, so you can open the next task from there.</p></div>
       </div>
     </section>
-    <section class="reference deployment" aria-labelledby="deployment-title">
-      <h2 id="deployment-title">Deployment</h2>
-      <div class="reference-rows">
-        <article><h3>On your computer</h3><p>Run the application locally and open the workspace in your browser.</p></article>
-        <article><h3>On your server</h3><p>Deploy on your own server for browser access over a network. Configure the address, HTTPS, authentication, and storage for your environment.</p></article>
-        <article><h3>Data storage</h3><p>Use SQLite, PostgreSQL, or MySQL. Back up the database and file storage together.</p></article>
-      </div>
+    <section class="booking-section wrap" aria-labelledby="booking-title">
+      <div class="section-heading"><div><p class="overline">Appointment scheduling</p><h2 id="booking-title">Define the meeting.<br>Set the available hours.</h2></div><p>Create appointment types, set weekly availability, add date-specific exceptions and choose which calendars are checked for conflicts.</p></div>
+      <figure class="booking-image"><a class="screen-link" href="./office-booking.html" target="_blank" rel="noopener" aria-label="Open the appointment availability screenshot at full size"><img class="product-screen" src="./office-booking.png" width="1440" height="900" loading="lazy" alt="An appointment configuration showing weekly availability, date-specific availability, calendar conflict checks and guest questions."></a><figcaption>Availability settings · Sample data</figcaption></figure>
+    </section>
+    <section class="deployment-section" aria-labelledby="deployment-title">
+      <div class="wrap deployment-grid"><div><p class="overline">Deployment</p><h2 id="deployment-title">You choose where<br>your workspace runs.</h2><p class="deployment-summary">On your computer or on your server.<br>Access it through the browser.</p></div><div class="deployment-options"><article><h3>Run it on your computer</h3><p>Install the application and open your workspace locally.</p></article><article><h3>Host it on your network</h3><p>Deploy on your own server and configure HTTPS, authentication and storage for browser access over the network.</p></article><p class="database-note">Database options: SQLite, PostgreSQL or MySQL.</p></div></div>
     </section>
   </main>
-  <footer class="site-footer wrap"><span>{{product}}</span><span>{{domain}}</span></footer>
+  <footer class="site-footer wrap"><div class="wordmark"><img src="./office.svg" width="24" height="24" alt="">{{brand}}</div><span>{{product}}</span><span>{{domain}}</span></footer>
 </body>
 </html>
