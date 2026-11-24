@@ -1,14 +1,14 @@
 {
-  "version": "0.1.1",
-  "url": "https://github.com/artpar/colleaf-website/releases/tag/office-v0.1.1",
+  "version": "0.1.2",
+  "url": "https://github.com/artpar/colleaf-website/releases/tag/office-v0.1.2",
   "assets": {
-    "download_macos": "Office-0.1.1-macos-arm64.dmg",
-    "download_windows": "Office-0.1.1-windows-x64-setup.exe",
-    "download_windows_portable": "Office-0.1.1-windows-x64-portable.zip",
-    "download_linux": "Office-0.1.1-linux-x64.deb",
-    "download_linux_portable": "Office-0.1.1-linux-x64.tar.gz",
+    "download_macos": "Office-0.1.2-macos-arm64.dmg",
+    "download_windows": "Office-0.1.2-windows-x64-setup.exe",
+    "download_windows_portable": "Office-0.1.2-windows-x64-portable.zip",
+    "download_linux": "Office-0.1.2-linux-x64.deb",
+    "download_linux_portable": "Office-0.1.2-linux-x64.tar.gz",
     "download_checksums": "SHA256SUMS",
-    "download_notices": "Office-0.1.1-notices.zip"
+    "download_notices": "Office-0.1.2-notices.zip"
   },
   "components": {
     "univer": "1.0.4",
