@@ -60,7 +60,10 @@ In the public repository, set the Actions variable `OFFICE_WEBSITE_PUBLISH` to
 workflow builds an artifact without deploying; changes must be copied to the
 website-only repository to publish them. Never mirror the app repository or
 copy its Git history to the public repository. Public release assets are
-distribution files, separate from the website source checkout.
+distribution files, separate from the website source checkout. Publish installers,
+portable builds, notices and checksums only. The owner explicitly keeps full
+application source-companion archives private; do not attach those archives
+to the public release.
 
 The Pages custom domain must also be set in GitHub's repository settings;
 Actions publishing does not use `CNAME` as its domain authority.
