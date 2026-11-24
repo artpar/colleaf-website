@@ -47,7 +47,7 @@ the source PNGs total less than 1 MiB.
 
 The app repository stays private. Its current GitHub plan does not support
 Pages for private repositories, so the public website is hosted from the
-website-only repository `artpar/office-website`. Only these reviewed paths are
+website-only repository `artpar/colleaf-website`. Only these reviewed paths are
 copied there:
 
 - `website/` source files (excluding generated `dist/`)

@@ -1,6 +1,6 @@
 {
   "version": "0.1.1",
-  "url": "https://github.com/artpar/office-website/releases/tag/office-v0.1.1",
+  "url": "https://github.com/artpar/colleaf-website/releases/tag/office-v0.1.1",
   "assets": {
     "download_macos": "Office-0.1.1-macos-arm64.dmg",
     "download_windows": "Office-0.1.1-windows-x64-setup.exe",
