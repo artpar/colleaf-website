@@ -11,12 +11,16 @@ in the public website repository; the application repository stays private.
 
 `office-downloads.json` records the release version and exact asset filenames.
 Publish and verify those assets before deploying the corresponding page update.
-The homepage, main navigation and footer link to Downloads.
+The homepage, main navigation and footer link to Downloads. The footer also
+links to Licenses and notices, with component-specific terms and the published
+notices archive. Update the component versions in `office-downloads.json` from
+the actual release inventory when publishing a new version; the legal page is
+not a blanket compliance certification for the whole product.
 
-`office-pages.json` registers the six pages and their metadata. The shared
+`office-pages.json` registers the seven pages and their metadata. The shared
 `layout.template.html` owns navigation and the footer; `index.template.html`
 and `pages/` contain the page bodies. The build emits flat HTML URLs, active
-navigation, page-specific canonical metadata and a six-page sitemap. All
+navigation, page-specific canonical metadata and a seven-page sitemap. All
 content and navigation work without JavaScript.
 
 Build with Node 22 or newer (no dependencies required):

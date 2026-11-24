@@ -40,5 +40,12 @@
     "title": "Downloads \u2014 {{brand}}",
     "description": "Download the macOS, Windows or Linux preview of {{product}}, with installation guidance and checksums.",
     "nav": "downloads"
+  },
+  {
+    "file": "licenses.html",
+    "template": "pages/licenses.html",
+    "title": "Licenses and notices \u2014 {{brand}}",
+    "description": "Open-source component licenses, Univer Apache and MIT terms, Daptin LGPL terms and full third-party notices.",
+    "nav": "licenses"
   }
 ]

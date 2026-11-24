@@ -9,5 +9,9 @@
     "download_linux_portable": "Office-0.1.1-linux-x64.tar.gz",
     "download_checksums": "SHA256SUMS",
     "download_notices": "Office-0.1.1-notices.zip"
+  },
+  "components": {
+    "univer": "1.0.4",
+    "daptin": "v0.13.62"
   }
 }

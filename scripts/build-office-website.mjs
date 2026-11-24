@@ -11,12 +11,14 @@ const screens = JSON.parse(await readFile(path.join(source, 'office-screens.json
 const pages = JSON.parse(await readFile(path.join(source, 'office-pages.json'), 'utf8'));
 const release = JSON.parse(await readFile(path.join(source, 'office-downloads.json'), 'utf8'));
 if (!/^\d+\.\d+\.\d+$/.test(release.version) || !/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/releases\/tag\/[\w.-]+$/.test(release.url)) throw new Error('Invalid download release');
+if (!/^\d+\.\d+\.\d+$/.test(release.components?.univer || '') || !/^v\d+\.\d+\.\d+$/.test(release.components?.daptin || '')) throw new Error('Invalid component license versions');
 const releaseBase = release.url.replace('/tag/', '/download/');
 const downloads = Object.fromEntries(Object.entries(release.assets).map(([key, name]) => {
   if (!/^[\w.-]+$/.test(name)) throw new Error('Invalid download filename');
   return [key, `${releaseBase}/${name}`];
 }));
-const data = { ...config, ...downloads, release_version: release.version, release_url: release.url };
+const data = { ...config, ...downloads, release_version: release.version, release_url: release.url,
+  license_univer_version: release.components.univer, license_backend_version: release.components.daptin };
 for (const screen of screens) {
   if (!/^office-[a-z-]+\.png$/.test(screen.file) || !screen.label || !screen.alt) throw new Error('Invalid screenshot metadata');
 }
