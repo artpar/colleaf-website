@@ -9,6 +9,14 @@ const output = path.join(source, 'dist');
 const config = JSON.parse(await readFile(path.join(source, 'office-site.json'), 'utf8'));
 const screens = JSON.parse(await readFile(path.join(source, 'office-screens.json'), 'utf8'));
 const pages = JSON.parse(await readFile(path.join(source, 'office-pages.json'), 'utf8'));
+const release = JSON.parse(await readFile(path.join(source, 'office-downloads.json'), 'utf8'));
+if (!/^\d+\.\d+\.\d+$/.test(release.version) || !/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/releases\/tag\/[\w.-]+$/.test(release.url)) throw new Error('Invalid download release');
+const releaseBase = release.url.replace('/tag/', '/download/');
+const downloads = Object.fromEntries(Object.entries(release.assets).map(([key, name]) => {
+  if (!/^[\w.-]+$/.test(name)) throw new Error('Invalid download filename');
+  return [key, `${releaseBase}/${name}`];
+}));
+const data = { ...config, ...downloads, release_version: release.version, release_url: release.url };
 for (const screen of screens) {
   if (!/^office-[a-z-]+\.png$/.test(screen.file) || !screen.label || !screen.alt) throw new Error('Invalid screenshot metadata');
 }
@@ -43,9 +51,9 @@ for (const file of ['office.css', 'office.svg', ...screens.map(screen => screen.
   }
 }
 const layout = await readFile(path.join(source, 'layout.template.html'), 'utf8');
-const navItems = [['workspace', 'Workspace'], ['communication', 'Mail & contacts'], ['scheduling', 'Calendar & booking'], ['deployment', 'How it runs']];
+const navItems = [['workspace', 'Workspace'], ['communication', 'Mail & contacts'], ['scheduling', 'Calendar & booking'], ['deployment', 'How it runs'], ['downloads', 'Downloads']];
 for (const page of pages) {
-  const content = interpolate(await readFile(path.join(source, page.template), 'utf8'), config);
+  const content = interpolate(await readFile(path.join(source, page.template), 'utf8'), data);
   const navigation = navItems.map(([key, label]) => `<a href="./${key}.html"${page.nav === key ? ' aria-current="page"' : ''}>${escape(label)}</a>`).join('');
   const pageUrl = `https://${config.domain}/${page.file === 'index.html' ? '' : page.file}`;
   let html = interpolate(layout.replace('{{content}}', () => content).replace('{{navigation}}', () => navigation), {

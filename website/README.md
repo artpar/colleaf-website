@@ -6,12 +6,17 @@ This is a standalone, static product website. Branding is supplied by
 The homepage introduces the complete suite through its actual workspace and
 three visual routes into the apps. Detailed capabilities and screenshots live
 on Workspace, Mail & contacts, and Calendar & booking pages. How it runs explains
-deployment choices. There is no download funnel or invented public download URL.
+deployment choices. Downloads links to the versioned, verified release assets
+in the public website repository; the application repository stays private.
 
-`office-pages.json` registers the five pages and their metadata. The shared
+`office-downloads.json` records the release version and exact asset filenames.
+Publish and verify those assets before deploying the corresponding page update.
+The homepage, main navigation and footer link to Downloads.
+
+`office-pages.json` registers the six pages and their metadata. The shared
 `layout.template.html` owns navigation and the footer; `index.template.html`
 and `pages/` contain the page bodies. The build emits flat HTML URLs, active
-navigation, page-specific canonical metadata and a five-page sitemap. All
+navigation, page-specific canonical metadata and a six-page sitemap. All
 content and navigation work without JavaScript.
 
 Build with Node 22 or newer (no dependencies required):
@@ -54,7 +59,8 @@ In the public repository, set the Actions variable `OFFICE_WEBSITE_PUBLISH` to
 `main` rebuild and deploy the website. In the private app repository, the same
 workflow builds an artifact without deploying; changes must be copied to the
 website-only repository to publish them. Never mirror the app repository or
-copy its Git history to the public repository.
+copy its Git history to the public repository. Public release assets are
+distribution files, separate from the website source checkout.
 
 The Pages custom domain must also be set in GitHub's repository settings;
 Actions publishing does not use `CNAME` as its domain authority.

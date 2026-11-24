@@ -85,3 +85,11 @@ img { display:block; max-width:100%; height:auto; }
 @media(max-width:760px) { .wrap { padding-inline:24px; } .site-header { align-items:flex-start; flex-direction:column; gap:12px; padding-block:20px 12px; } .site-nav { width:100%; justify-content:space-between; gap:0 16px; } .app-routes { grid-template-columns:minmax(0,1fr); gap:24px; } .app-card { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; } .app-card img { border:0; } .app-card>div { padding:20px; } .ownership-strip { grid-template-columns:minmax(0,1fr); gap:24px; } .communication-stories,.setup-choices,.operation-grid { grid-template-columns:minmax(0,1fr); gap:32px; } .onward { align-items:flex-start; flex-direction:column; gap:20px; } }
 @media(max-width:600px) { .wrap { padding-inline:20px; } .site-nav { justify-content:flex-start; column-gap:18px; font-size:.875rem; } .site-nav a { min-height:44px; } .home-intro { padding-block:28px; } .app-card { display:flex; } .app-routes { padding-block:8px 32px; } .ownership-strip { padding-block:28px; } .page-intro { padding-block:28px 16px; } .capability-columns,.screen-pair { grid-template-columns:minmax(0,1fr); gap:28px; } .feature-list { gap:12px; } .setup-choices article { padding:22px; } .site-footer { gap:14px 20px; } .site-footer>span { width:100%; order:3; } }
 @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
+
+.download-platforms { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; padding-block:24px 48px; }
+.download-platforms article { min-width:0; border-top:1px solid var(--border); padding-top:24px; }
+.download-platforms p { color:var(--muted); margin-block:12px 20px; }
+.download-platforms .download-detail { margin-block:20px 12px; }
+.download-notes { padding-block:32px 48px; border-top:1px solid var(--border); }
+.download-notes p { max-width:900px; color:var(--muted); margin-top:16px; }
+@media (max-width:760px) { .download-platforms { grid-template-columns:minmax(0,1fr); gap:28px; } }

@@ -33,5 +33,12 @@
     "title": "How it runs \u2014 {{brand}}",
     "description": "Run the suite on your computer or server. Choose storage, updates, backups and network access.",
     "nav": "deployment"
+  },
+  {
+    "file": "downloads.html",
+    "template": "pages/downloads.html",
+    "title": "Downloads \u2014 {{brand}}",
+    "description": "Download the macOS, Windows or Linux preview of {{product}}, with installation guidance and checksums.",
+    "nav": "downloads"
   }
 ]
